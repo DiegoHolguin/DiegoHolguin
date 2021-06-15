@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginConductor">
+
+    <ImageView
+        android:id="@+id/imageIniConductor"
+        android:layout_width="362dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="632dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/triangulo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <Button
+        android:id="@+id/iniOcupado"
+        android:layout_width="162dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="40dp"
+        android:onClick="ButonOcupado"
+        android:text="Ocupado"
+        android:textColor="#000000"
+        app:backgroundTint="#BD0000"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/iniDisponible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageIniConductor"
+        app:strokeColor="#000000" />
+
+    <Button
+        android:id="@+id/iniDisponible"
+        android:layout_width="162dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Disponible"
+        android:textColor="#000000"
+        app:backgroundTint="#4CAF50"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iniOcupado"
+        app:layout_constraintTop_toBottomOf="@+id/imageIniConductor"
+        app:strokeColor="#000000" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="334dp"
+        android:layout_height="360dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnIniDesconectar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageIniConductor"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <Button
+        android:id="@+id/btnIniDesconectar"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:text="Desconectar"
+        android:onClick="iniDesconectar"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/inferior" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
